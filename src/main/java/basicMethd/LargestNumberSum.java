@@ -1,4 +1,4 @@
-package main.java;
+package main.java.basicMethd;
 
 public class LargestNumberSum {
     public static void main(String[] args) {

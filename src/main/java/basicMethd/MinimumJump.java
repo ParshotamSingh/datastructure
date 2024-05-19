@@ -1,4 +1,4 @@
-package main.java;
+package main.java.basicMethd;
 
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicInteger;

@@ -1,4 +1,4 @@
-package main.java;
+package main.java.basicMethd;
 
 class DuplicateNumber {
     public static void main(String[] args) {
