@@ -5,9 +5,9 @@ import java.util.Arrays;
 public class LargestConsecutiveArray {
     public static void main(String[] args) {
         int[] arr1 = {18,2,15,6,12,1,19,91,13,4,5,14,3,16,17};
-        int[] arr2 = {-1,-2,-3,-4};
+        int[] arr2 = {12,6,1,9,4,5,3};
         System.out.println(getLargestSum(arr1));
-//        System.out.println(getLargestSum(arr2));
+        System.out.println(getLargestSum(arr2));
 
     }
 
@@ -33,13 +33,11 @@ public class LargestConsecutiveArray {
                 }
             if(count>=largestArray){
                 largestArray = count;
-                if(k==0&&arr[k]+1==arr[k+1])
-                    largestArray++;
             }
             k--;
             }
             flag = true;
         }
-        return largestArray;
+        return largestArray+1;
     }
 }
