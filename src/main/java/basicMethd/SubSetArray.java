@@ -9,18 +9,17 @@ public class SubSetArray {
 
     }
     public static boolean isSubSetArray(int a1[], int a2[]){
-        boolean flag = false;
+        int count = 0;
         for(int i=0;i<a1.length;i++){
-            flag = false;
-          for(int j=0;j<a2.length;j++){
+            for(int j=0;j<a2.length;j++){
               if(a2[j]==a1[i]) {
-                  flag = true;
+                  count++;
               }
           }
-          if(!flag){
-              return false;
-          }
         }
-        return flag;
+        if(count<a2.length){
+            return false;
+        }
+        return true;
     }
 }
