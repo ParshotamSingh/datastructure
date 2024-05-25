@@ -44,14 +44,31 @@ class GFG {
             System.out.println("is not a subset");
     }
 
+    static boolean isSubset(int arr1[], int m, int arr2[], int n) {
+        if (m > n) return false;
+        for (int i = 0; i < m; i++) {
+            boolean present = false;
+            for (int j = 0; j < n; j++) {
+                if (arr2[j] == arr1[i]) {
+                    present = true;
+                    break;
+                }
+            }
+            if (present == false) return false;
+        }
+        return true;
+    }
+
     // Driver code
     public static void main(String args[]) {
         int arr1[] = {11, 1, 13, 21, 3, 3, 7, 3};
-        int arr2[] = {11, 3, 3, 7, 1};
+        int arr2[] = {11, 3, 3, 7, 1, 1};
 
         int m = arr1.length;
         int n = arr2.length;
-        findIfArrayIsASubset(arr1, arr2);
+
+//        findIfArrayIsASubset(arr1, arr2);
+        System.out.println(isSubset(arr1, arr2,m,n));
 
 
     }
