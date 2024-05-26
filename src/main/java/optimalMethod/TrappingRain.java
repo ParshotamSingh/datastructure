@@ -3,33 +3,25 @@ package main.java.optimalMethod;
 public class TrappingRain {
     public static void main(String[] args) {
 
-        int arr1[] = {3,0,0,2,0,4,0,0,4};
-        int arr2[] = {8,3,6,0,7,0,5,0,3};
-        System.out.println(getTrappingRainWater(arr2));
+        int arr[] = {3,0,0,2,0,4,0,0,4};
+        System.out.println(getTrappingRainWater(arr));
 
     }
     public static int getTrappingRainWater(int a[]){
-
+        int highest  = a[0];
+        int secondHighest = 0;
         int capacity = 0;
         int fixCapacity = 0;
         for(int i=0;i<a.length-1;i++){
-            int bigP  = 0;
-            int biggestP = 0;
-            int midP = 0;
-            int smallP = 0;
-            if(a[i]<a[i+2]){
-                bigP = a[i+2];
-                smallP = a[i];
-                midP = a[i+1];
-            }else {
-                bigP = a[i];
-                smallP = a[i+2];
-                midP = a[i+1];
+            if(highest<a[i]){
+                secondHighest = highest;
+                highest = a[i];
+                fixCapacity = capacity;
+//                capacity = 0;
             }
-            if(biggestP<bigP){
-                biggestP = bigP;
+            if((highest-a[i+1])>0){
+                capacity = (highest - a[i + 1]) + capacity;
             }
-            capacity = smallP - midP + capacity;
         }
         return capacity;
     }
