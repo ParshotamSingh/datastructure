@@ -1,6 +1,4 @@
-package main.java.basicMethd;
-
-import java.util.Arrays;
+package main.java.arrayBasicMethd;
 
 public class LargestConsecutiveArray {
     public static void main(String[] args) {

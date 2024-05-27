@@ -1,4 +1,4 @@
-package main.java.basicMethd;
+package main.java.arrayBasicMethd;
 import java.util.Arrays;
 public class MergeSortedArray {
     public static void main(String args[]){

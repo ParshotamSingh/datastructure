@@ -1,4 +1,4 @@
-package main.java.basicMethd;
+package main.java.arrayBasicMethd;
 
 public class CountInversion {
     public static void main(String[] args) {

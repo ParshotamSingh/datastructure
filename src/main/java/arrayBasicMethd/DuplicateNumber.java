@@ -1,4 +1,4 @@
-package main.java.basicMethd;
+package main.java.arrayBasicMethd;
 
 class DuplicateNumber {
     public static void main(String[] args) {

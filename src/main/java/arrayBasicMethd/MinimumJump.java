@@ -1,7 +1,4 @@
-package main.java.basicMethd;
-
-import java.util.Arrays;
-import java.util.concurrent.atomic.AtomicInteger;
+package main.java.arrayBasicMethd;
 
 public class MinimumJump {
     public static void main(String args[]){
