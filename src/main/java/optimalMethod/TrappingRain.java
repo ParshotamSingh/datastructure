@@ -25,4 +25,22 @@ public class TrappingRain {
         }
         return capacity;
     }
+
+    public static int getTrappingRainWaterComplete(int a[]){
+        int firstE = a[0];
+        int larger = 0;
+        int count = 0;
+        int fixCapacity = 0;
+        for(int i=0;i<a.length;i++){
+            for(int j=0;j<a.length;j++){
+                if(firstE<=a[j]){
+                    larger = a[j];
+                    fixCapacity = count + fixCapacity;
+                    count = 0;
+                }
+                count = count+a[j+1];
+            }
+        }
+        return 0;
+    }
 }
