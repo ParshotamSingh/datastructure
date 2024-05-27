@@ -4,7 +4,8 @@ public class TrappingRain {
     public static void main(String[] args) {
 
         int arr[] = {3,0,0,2,0,4,0,0,4};
-        System.out.println(getTrappingRainWater(arr));
+//        System.out.println(getTrappingRainWater(arr));
+        System.out.println(getTrappingRainWaterComplete(arr));
 
     }
     public static int getTrappingRainWater(int a[]){
@@ -28,17 +29,21 @@ public class TrappingRain {
 
     public static int getTrappingRainWaterComplete(int a[]){
         int firstE = a[0];
+        int endPosition = 0;
+        int startPosition = 0;
         int larger = 0;
         int count = 0;
         int fixCapacity = 0;
-        for(int i=0;i<a.length;i++){
-            for(int j=0;j<a.length;j++){
-                if(firstE<=a[j]){
+        for(int i=0;i<a.length;i++) {
+            for (int j = endPosition; j < a.length - 1; j++) {
+                if (a[startPosition] <= a[j + 1]) {
                     larger = a[j];
-                    fixCapacity = count + fixCapacity;
-                    count = 0;
+                    endPosition = j;
+                    startPosition = endPosition + 1;
                 }
-                count = count+a[j+1];
+                for (int k = startPosition; k < endPosition; k++) {
+                    count = count + a[k];
+                }
             }
         }
         return 0;
