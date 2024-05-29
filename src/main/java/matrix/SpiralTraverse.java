@@ -17,18 +17,35 @@ public class SpiralTraverse {
 //        int pointC[] = {x-1,y-1};
 //        int pointD[] = {x-1,0};
         int pointA = 0;
-        int pointB = x-1;
-        int pointC = x-1;
+        int pointB = x;
+        int pointC = x;
         int pointD = 0;
         int mSize = x * y;
+        int turn = 0;
         int outputArray[] = new int[mSize];
         for(int i=0;i<x;i++){
-            for(int j=i;j<y;j++){
-                System.out.println();
+            turn++;
+            if(turn==1){
+                for(int j=pointA;j<pointB;j++){
+                System.out.println(a[pointA][j]);
+                }
             }
-
+            if(turn==2){
+                for(int j=0;j<pointC;j++){
+                    System.out.println(a[j][pointB-1]);
+                }
+            }
+            if(turn==3){
+                for(int j=pointC-1;j>=pointD;j--){
+                    System.out.println(a[pointC-1][j]);
+                }
+            }
+            if(turn==4){
+                for(int j=pointB-1;j>=pointD;j--){
+                    System.out.println(a[j][pointA]);
+                }
+            }
         }
         return null;
-
     }
 }
