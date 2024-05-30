@@ -27,23 +27,24 @@ public class SpiralTraverse {
             turn++;
             if(turn==1){
                 for(int j=pointA;j<pointB;j++){
-                System.out.println(a[pointA][j]);
+                System.out.print(" "+a[pointA][j]);
                 }
             }
             if(turn==2){
-                for(int j=0;j<pointC;j++){
-                    System.out.println(a[j][pointB-1]);
+                for(int j=1;j<pointC;j++){
+                    System.out.print(" "+a[j][pointB-1]);
                 }
             }
             if(turn==3){
-                for(int j=pointC-1;j>=pointD;j--){
-                    System.out.println(a[pointC-1][j]);
+                for(int j=pointC-2;j>pointD;j--){
+                    System.out.print(" "+a[pointC-1][j]);
                 }
             }
             if(turn==4){
                 for(int j=pointB-1;j>=pointD;j--){
-                    System.out.println(a[j][pointA]);
+                    System.out.print(" "+a[j][pointA]);
                 }
+                turn = 1;
             }
         }
         return null;
