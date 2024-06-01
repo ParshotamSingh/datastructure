@@ -13,7 +13,6 @@ public class MaxRowOnes {
                 }
 
             }
-
             if(count>=sum){
                 sum = count;
                 row = i;
