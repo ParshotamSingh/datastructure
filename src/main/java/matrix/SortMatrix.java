@@ -21,6 +21,7 @@ public class SortMatrix {
                         a[i][j+1]=temp;
                     }
                 }
+
                 if(i<n-1){
                     if(a[i][m-1]>a[i+1][0]){
                         temp = a[i][m-1];
