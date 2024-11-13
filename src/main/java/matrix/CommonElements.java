@@ -15,7 +15,7 @@ public class CommonElements {
         int count = 0;
         for(int i=0;i<a.length;i++){
             for (int j=0;j<a[0].length;j++){
-                if(a[0][j]==)
+
 
             }
         }
